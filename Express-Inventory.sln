@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32203.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Express-Inventory", "Express-Inventory.csproj", "{727F8673-9ED4-43FF-AC42-162D0F7BEEEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{727F8673-9ED4-43FF-AC42-162D0F7BEEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{727F8673-9ED4-43FF-AC42-162D0F7BEEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{727F8673-9ED4-43FF-AC42-162D0F7BEEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{727F8673-9ED4-43FF-AC42-162D0F7BEEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57BD253F-DB32-4094-BE24-4EC8CD7CE770}
+	EndGlobalSection
+EndGlobal
