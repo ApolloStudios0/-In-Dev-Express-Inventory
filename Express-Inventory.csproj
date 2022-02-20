@@ -4,8 +4,32 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>Express_Inventory</RootNamespace>
-    <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\FilledLogo.png" />
+    <None Remove="Resources\Logo.png" />
+    <None Remove="Resources\LogoText.png" />
+    <None Remove="Resources\pexels-pixabay-257636.jpg" />
+    <None Remove="Resources\pexels-tiger-lily-4483610.jpg" />
+    <None Remove="Resources\StockWarehouse.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+    <PackageReference Include="MySqlConnector" Version="2.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\FilledLogo.png" />
+    <Resource Include="Resources\Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\LogoText.png" />
+    <Resource Include="Resources\pexels-pixabay-257636.jpg" />
+    <Resource Include="Resources\pexels-tiger-lily-4483610.jpg" />
+    <Resource Include="Resources\StockWarehouse.jpg" />
+  </ItemGroup>
 
 </Project>
