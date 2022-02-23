@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Express_Inventory.Main"
+        xmlns:local="clr-namespace:Express_Inventory.Main" xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"
@@ -88,11 +88,70 @@
                                 </LinearGradientBrush>
                             </Label.Foreground>
                         </Label>
-
-                        <Rectangle Grid.Row="1"
+                        
+                        <!-- Stock Charting -->
+                        <Border>
+                            <Grid>
+                                <Rectangle Grid.ColumnSpan="2"
                                    RadiusX="10" RadiusY="10" 
                                    Style="{StaticResource OrangeRedBrusher}"
-                                   Margin="5"/>
+                                   Margin="5" Grid.RowSpan="2"/>
+
+                                <Label Content="Active Inventory" Foreground="White"
+                                       HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                       FontWeight="Bold" Opacity="0.6"/>
+
+                                <lvc:PieChart Hoverable="False" InnerRadius="40" Margin="20"
+                                              Grid.RowSpan="2">
+                                    <lvc:PieChart.Series>
+                                        <lvc:PieSeries Title="Maria" Fill="LimeGreen" Values="9823" DataLabels="False"
+                                            LabelPoint="{Binding PointLabel}"/>
+                                        <lvc:PieSeries Title="Charles" Fill="DarkBlue" Values="5000" DataLabels="False" 
+                                            LabelPoint="{Binding PointLabel}"/>
+                                    </lvc:PieChart.Series>
+                                </lvc:PieChart>
+
+                                <Border Grid.Column="1">
+                                    <Grid>
+
+                                        <StackPanel Grid.Row="1" Grid.RowSpan="2"
+                                                    Orientation="Horizontal">
+                                            <Rectangle Fill="LimeGreen" Width="20" Height="20"
+                                                       RadiusX="5" RadiusY="5"/>
+                                            <Label Content="Active Products" Foreground="White" Margin="5,0,0,0"
+                                                   FontWeight="Bold"
+                                                   VerticalAlignment="Center"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Row="2" Grid.RowSpan="2"
+                                                    Orientation="Horizontal">
+                                            <Rectangle Fill="DarkBlue" Width="20" Height="20"
+                                                       RadiusX="5" RadiusY="5"/>
+                                            <Label Content="Inactive Products" Foreground="White" Margin="5,0,0,0"
+                                                   FontWeight="Bold"
+                                                   VerticalAlignment="Center"/>
+                                        </StackPanel>
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                    </Grid>
+                                </Border>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="10"/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </Border>
+
                         <Rectangle Grid.Row="1" Grid.Column="1"
                                    Style="{StaticResource OrangeRedBrusher}"
                                    RadiusX="10" RadiusY="10"
@@ -105,7 +164,6 @@
                                    Style="{StaticResource OrangeRedBrusher}"
                                    RadiusX="10" RadiusY="10"
                                    Margin="5"/>
-
 
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -120,6 +178,7 @@
 
                 <!-- Sub Defs -->
                 <Grid.RowDefinitions>
+                    <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
