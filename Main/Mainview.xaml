@@ -4,9 +4,176 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Express_Inventory.Main"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        AllowsTransparency="True"
+        MinHeight="400" MinWidth="600"
         mc:Ignorable="d"
-        Title="Mainview" Height="450" Width="800">
+        Background="Transparent"
+        Title="Mainview" Height="1000" Width="1440">
+
+    <Window.Resources>
+        <Style x:Key="OrangeRedBrusher" TargetType="Rectangle">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                        <GradientStop Color="#cd4811" Offset="0" />
+                        <GradientStop Color="#cc2740" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         
+        
+
+        <!-- Orange Background -->
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="-20,-20,0,0">
+            <Grid>
+                <!-- Orange Background -->
+                <Rectangle RadiusX="10" RadiusY="10"
+                           Fill="White">
+                </Rectangle>
+                <Rectangle MouseDown="MoveTheForm" RadiusX="10" RadiusY="10">
+                </Rectangle>
+            </Grid>
+        </Border>
+        
+        <!-- White Form Borders -->
+        <Rectangle
+                   Grid.ColumnSpan="3"
+                   RadiusX="5" RadiusY="5"
+                   MouseDown="MoveTheForm">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                    <GradientStop Color="#cd4811" Offset="0" />
+                    <GradientStop Color="#cc2740" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="LeftSideMenu"
+                   Grid.RowSpan="2"
+                   RadiusX="5" RadiusY="5"
+                   MouseEnter="EnterMenu">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                    <GradientStop Color="#cd4811" Offset="0" />
+                    <GradientStop Color="#cc2740" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <!-- Boxes of Information -->
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+            <Grid>
+
+                <Border Grid.ColumnSpan="6"
+                           Grid.RowSpan="2" Margin="10"
+                           CornerRadius="10"
+                           BorderThickness="2">
+                    <Grid>
+                        
+                        <!-- Customers Name -->
+                        <Label Content=""
+                               FontFamily="Bahnschrift"
+                               FontSize="21" Grid.ColumnSpan="12" Margin="5"
+                               FontWeight="Bold">
+                            <Label.Foreground>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                                    <GradientStop Color="#cd4811" Offset="0" />
+                                    <GradientStop Color="#cc2740" Offset="1" />
+                                </LinearGradientBrush>
+                            </Label.Foreground>
+                        </Label>
+
+                        <Rectangle Grid.Row="1"
+                                   RadiusX="10" RadiusY="10" 
+                                   Style="{StaticResource OrangeRedBrusher}"
+                                   Margin="5"/>
+                        <Rectangle Grid.Row="1" Grid.Column="1"
+                                   Style="{StaticResource OrangeRedBrusher}"
+                                   RadiusX="10" RadiusY="10"
+                                   Margin="5"/>
+                        <Rectangle Grid.Row="1" Grid.Column="2"
+                                   Style="{StaticResource OrangeRedBrusher}"
+                                   RadiusX="10" RadiusY="10"
+                                   Margin="5"/>
+                        <Rectangle Grid.Row="1" Grid.Column="3"
+                                   Style="{StaticResource OrangeRedBrusher}"
+                                   RadiusX="10" RadiusY="10"
+                                   Margin="5"/>
+
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </Border>
+                
+ 
+
+                <!-- Sub Defs -->
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Border>
+        
+        
+        <!-- Detailed Left Side Menu-->
+        <Rectangle x:Name="DetailedLeftMenu" Opacity="0"
+                   Grid.RowSpan="2" Grid.ColumnSpan="2" Visibility="Collapsed"
+                   Fill="White"
+                   RadiusX="5" RadiusY="5"
+                   MouseLeave="ExitMenu"/>
+
+        <!-- Form Controls -->
+        <StackPanel Grid.Column="2" Margin="0,-7,0,0" Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <Button Content="-" Foreground="White" x:Name="MinimizeButton"
+                    FontSize="13" Background="Transparent" Click="MinimizeButton_Click"
+                    BorderBrush="Transparent"
+                    FontWeight="Bold"
+                    />
+            <Button Content="▢" Foreground="White" x:Name="ExpandButton"
+                    FontSize="13" Background="Transparent" Click="ExpandButton_Click"
+                    BorderBrush="Transparent"
+                    FontWeight="Bold"/>
+            <Button Content="X" Foreground="White" x:Name="CloseButton"
+                    FontSize="13" Background="Transparent" Click="CloseButton_Click"
+                    BorderBrush="Transparent"
+                    FontWeight="Bold"/>
+        </StackPanel>
+
+        <!-- Main Definitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
     </Grid>
 </Window>

@@ -166,9 +166,9 @@
                        Width="320" Height="40"
                        Content="Sign In"
                        Foreground="White"
-                       FontWeight="Bold" FontSize="13"/>
+                       FontWeight="Bold" FontSize="13" MouseDown="LoginButtonPressed"/>
                 <Label Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="3"
-                       Margin="0,0,0,-10" Opacity="0.7" MouseDown="LoginButtonPressed">
+                       Margin="0,0,0,-10" Opacity="0.7">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Don't have an account? "/>
                         <TextBlock Foreground="Red" Text="Sign Up Now" FontWeight="Bold" 

@@ -77,7 +77,9 @@ public partial class Welcome : Window
 
     private void LoginButtonPressed(object sender, MouseButtonEventArgs e)
     {
-        Authentication.LoginAuth.CheckAccessToken();
+        Main.Mainview mv = new();
+        mv.Show();
+        this.Close();
     }
 
     #endregion
