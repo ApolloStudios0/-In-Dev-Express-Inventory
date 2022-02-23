@@ -3,7 +3,7 @@
     class DatabaseServicer
     {
         // Connection Properties (Todo: Increase Security)
-        public static string ConnectionString { get; set; } = "server=expressinventory.c5m8cxzwgkhr.eu-west-2.rds.amazonaws.com;Port=6066;user=InventoryManager;password=2a15$BtRpCq.O90vfFNLOaU4u.M5Be9XSGgm;database=sys;Connection Timeout=60";
+        public static string ConnectionString { get; set; } 
 
         // Setup Connection
         public static string ExecuteScalar(string Query, string Database = "sys")
