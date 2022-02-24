@@ -27,9 +27,6 @@
     </Window.Resources>
 
     <Grid>
-        
-        
-
         <!-- Orange Background -->
         <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="-20,-20,0,0">
             <Grid>
@@ -152,16 +149,60 @@
                             </Grid>
                         </Border>
 
-                        <Rectangle Grid.Row="1" Grid.Column="1"
-                                   Style="{StaticResource OrangeRedBrusher}"
+                        <!-- Open Orders -->
+                        <Border Grid.Column="1" CornerRadius="10">
+                            <Grid>
+                                
+                                <!-- Background -->
+                                <Rectangle Grid.ColumnSpan="12" Grid.RowSpan="12"
+                                   Fill="#58C1FF"
                                    RadiusX="10" RadiusY="10"
                                    Margin="5"/>
+                                
+                                <!-- Filler & Text -->
+                                <Label Content="Open Orders"
+                                       FontFamily="Dubai"
+                                       FontWeight="Bold"
+                                       FontSize="22"
+                                       Margin="0,0,0,-5"
+                                       Grid.Column="1"
+                                       Grid.ColumnSpan="2"
+                                       VerticalAlignment="Bottom"
+                                       Foreground="White"/>
+                                <Label Content="32" x:Name="NumberOfOrdersCounter"
+                                       FontFamily="Dubai"
+                                       FontWeight="Bold"
+                                       FontSize="60"
+                                       VerticalAlignment="Top"
+                                       Grid.Column="1" Grid.Row="1"
+                                       Grid.ColumnSpan="2"
+                                       Margin="0,-20,0,0"
+                                       Foreground="White"/>
+                                <Image Source="/Resources/Box.png"
+                                       Grid.Column="2"
+                                       Grid.RowSpan="2"
+                                       Margin="40"/>
+
+                                <!-- Sub Defs -->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="75"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </Border>
+                        
+                        
                         <Rectangle Grid.Row="1" Grid.Column="2"
-                                   Style="{StaticResource OrangeRedBrusher}"
+                                   Fill="#00FF7F"
                                    RadiusX="10" RadiusY="10"
                                    Margin="5"/>
                         <Rectangle Grid.Row="1" Grid.Column="3"
-                                   Style="{StaticResource OrangeRedBrusher}"
+                                   Fill="#FF3500"
                                    RadiusX="10" RadiusY="10"
                                    Margin="5"/>
 
