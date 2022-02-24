@@ -163,7 +163,7 @@
                                 <Label Content="Open Orders"
                                        FontFamily="Dubai"
                                        FontWeight="Bold"
-                                       FontSize="22"
+                                       FontSize="20"
                                        Margin="0,0,0,-5"
                                        Grid.Column="1"
                                        Grid.ColumnSpan="2"
@@ -182,7 +182,8 @@
                                        RenderOptions.BitmapScalingMode="Fant"
                                        Grid.Column="2"
                                        Grid.RowSpan="2"
-                                       Margin="40"/>
+                                       Margin="40"
+                                       Opacity="0.7"/>
 
                                 <!-- Sub Defs -->
                                 <Grid.ColumnDefinitions>
@@ -196,17 +197,106 @@
                                 </Grid.RowDefinitions>
                             </Grid>
                         </Border>
-                        
-                        
-                        <Rectangle Grid.Row="1" Grid.Column="2"
+
+                        <!-- Products Sold Today -->
+                        <Border Grid.Column="2" CornerRadius="10">
+                            <Grid>
+
+                                <!-- Background -->
+                                <Rectangle Grid.ColumnSpan="12" Grid.RowSpan="12"
                                    Fill="#00FF7F"
                                    RadiusX="10" RadiusY="10"
                                    Margin="5"/>
-                        <Rectangle Grid.Row="1" Grid.Column="3"
+
+                                <!-- Filler & Text -->
+                                <Label Content="Products Sold Today"
+                                       FontFamily="Dubai"
+                                       FontWeight="Bold"
+                                       FontSize="20"
+                                       Margin="0,0,0,-5"
+                                       Grid.Column="1"
+                                       Grid.ColumnSpan="2"
+                                       VerticalAlignment="Bottom"
+                                       Foreground="White"/>
+                                <Label Content="614"
+                                       FontFamily="Dubai"
+                                       FontWeight="Bold"
+                                       FontSize="60"
+                                       VerticalAlignment="Top"
+                                       Grid.Column="1" Grid.Row="1"
+                                       Grid.ColumnSpan="2"
+                                       Margin="0,-20,0,0"
+                                       Foreground="White"/>
+                                <Image Source="/Resources/Basket.png"
+                                       RenderOptions.BitmapScalingMode="Fant"
+                                       Grid.Column="2"
+                                       Grid.RowSpan="2"
+                                       Margin="40"
+                                       Opacity="0.7"/>
+
+                                <!-- Sub Defs -->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="75"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </Border>
+
+                        <!-- Products Need Attention -->
+                        <Border Grid.Column="3" CornerRadius="10">
+                            <Grid>
+
+                                <!-- Background -->
+                                <Rectangle Grid.ColumnSpan="12" Grid.RowSpan="12"
                                    Fill="#FF3500"
                                    RadiusX="10" RadiusY="10"
                                    Margin="5"/>
 
+                                <!-- Filler & Text -->
+                                <Label Content="Action Needed"
+                                       FontFamily="Dubai"
+                                       FontWeight="Bold"
+                                       FontSize="20"
+                                       Margin="0,0,0,-5"
+                                       Grid.Column="1"
+                                       Grid.ColumnSpan="2"
+                                       VerticalAlignment="Bottom"
+                                       Foreground="White"/>
+                                <Label Content="2"
+                                       FontFamily="Dubai"
+                                       FontWeight="Bold"
+                                       FontSize="60"
+                                       VerticalAlignment="Top"
+                                       Grid.Column="1" Grid.Row="1"
+                                       Grid.ColumnSpan="2"
+                                       Margin="0,-20,0,0"
+                                       Foreground="White"/>
+                                <Image Source="/Resources/A_Shout.png"
+                                       RenderOptions.BitmapScalingMode="Fant"
+                                       Grid.Column="2"
+                                       Grid.RowSpan="2"
+                                       Margin="40"
+                                       Opacity="0.7"/>
+
+                                <!-- Sub Defs -->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="75"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+                        </Border>
+
+                        <!-- Sub Definitions -->
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
@@ -215,8 +305,6 @@
                         </Grid.ColumnDefinitions>
                     </Grid>
                 </Border>
-                
- 
 
                 <!-- Sub Defs -->
                 <Grid.RowDefinitions>

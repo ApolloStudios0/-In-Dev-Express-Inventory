@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\A_shout.png" />
+    <None Remove="Resources\Basket.png" />
     <None Remove="Resources\Box.png" />
     <None Remove="Resources\FilledLogo.png" />
     <None Remove="Resources\Logo.png" />
@@ -24,6 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\A_shout.png" />
+    <Resource Include="Resources\Basket.png" />
     <Resource Include="Resources\Box.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
